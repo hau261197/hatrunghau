@@ -662,7 +662,7 @@ ul li a{
 }
 
 /* -----------------------------------------slider---------------------------------------------- */
-.image {
+/* .image {
     width: 1142px;
     height: 470px;
     overflow: hidden;
@@ -699,10 +699,6 @@ ul li a{
   .labels {
       text-align: center;
   }
-  /* .fake-radio {
-    float: right;
-  } */
-  /* Move slides overflowed container */
   #slide1:checked ~ .images .images-inner {
     margin-left: 0;
   }
@@ -712,7 +708,6 @@ ul li a{
   #slide3:checked ~ .images .images-inner {
     margin-left: -200%;
   }
-  /* Color of bullets */
   #slide1:checked ~ div .fake-radio .radio-btn:nth-child(1),
   #slide2:checked ~ div .fake-radio .radio-btn:nth-child(2),
   #slide3:checked ~ div .fake-radio .radio-btn:nth-child(3) {
@@ -727,7 +722,6 @@ ul li a{
     margin: 0 1px;
     cursor: pointer;
   }
-  /* Text of slides */
   #slide1:checked ~ .labels .label:nth-child(1),
   #slide2:checked ~ .labels .label:nth-child(2),
   #slide3:checked ~ .labels .label:nth-child(3) {
@@ -737,7 +731,6 @@ ul li a{
     opacity: 0;
     position: absolute;
   }
-  /* Calculate AUTOPLAY for BULLETS */
   @keyframes bullet {
     0%, 33.32333333333334%	{
       background: red;
@@ -755,7 +748,6 @@ ul li a{
   #play1:checked ~ div .fake-radio .radio-btn:nth-child(3) {
     animation: bullet 12300ms infinite 7200ms;	
   }
-  /* Calculate AUTOPLAY for SLIDES */
   @keyframes slide {
     0%, 25.203252032520325%	{ margin-left: 0; }
     33.333333333333336%, 58.53658536585366%	{ margin-left: -100%; }
@@ -764,7 +756,6 @@ ul li a{
   .st-slider > #play1:checked ~ .images .images-inner {
     animation: slide 12300ms infinite;	
   }
-  /* Calculate AUTOPLAY for CAPTION */
   @keyframes caption {
     0%, 33.32333333333334%	{
       opacity: 1;
@@ -781,8 +772,68 @@ ul li a{
   }
   #play1:checked ~ .labels .label:nth-child(3) {
     animation: caption 12300ms infinite 7200ms;	
-  }
-  /* Calculate AUTOPLAY for CAPTION - END */
+  } */
+  /* ---------------------slide - 2---------------------------------------------------- */
+  .mySlides {display: none;}
+.slideshow-container img {vertical-align: middle;}
+
+/* Slideshow container */
+.slideshow-container {
+  position: relative;
+  margin: 0px 60px 0px 60px;
+  padding-top: 20px;
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .text {font-size: 11px}
+}
 /* ------------------------Search button animate-------------------------------- */
 .search-box{
     width: fit-content;

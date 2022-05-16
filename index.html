@@ -69,57 +69,40 @@
                 <h3>CÔNG TY TNHH TM DV BAO BÌ GIẤY MINH THƯ</h3>
                 <p>NHÀ MÁY SẢN XUẤT VÀ KINH DOANH BAO BÌ CARTON</p>
             </div> -->
-            <div id="slider_background">
-                <div id="homepage-slider" style="padding-top:15px" class="st-slider">
+            <!-- <div id="slider_background">
+                <div class="slideshow-container">
 
-                    <input type="radio" class="cs_anchor radio" name="slider" id="slide1"/>
-                    <input type="radio" class="cs_anchor radio" name="slider" id="slide2"/>
-                    <input type="radio" class="cs_anchor radio" name="slider" id="slide3"/>
-                    <input type="radio" class="cs_anchor radio" name="slider" id="play1" checked="checked"/>
-                
-                    <div class="images">
-                       <div class="images-inner">
-                        <div class="image-slide">
-                          <div class="image bg-yellow" >
-                              <a href="">
-                                <img src="img/slider.png" alt="" width="1142" height="470">
-                            </a>
-                          </div>
-                        </div>
-                        <div class="image-slide">
-                          <div class="image bg-blue" >
-                              <a href="">
-                                <img src="img/slider_02.jpg" alt="" width="1142" height="470">
-                            </a>
-                        </div>
-                        </div>
-                        <div class="image-slide">
-                          <div class="image bg-red" >
-                              <a href="">
-                                <img src="img/slider_03.jpg" alt="" width="1142" height="470">
-                            </a>
-                        </div>
-                        </div>
-                      </div>
+                    <div class="mySlides fade">
+                      <img src="img/slider.png" style="width: 1142px;
+                      height: 470px;">
+                      <div class="text">Caption Text</div>
                     </div>
-                  
-                    <div class="labels" >
-                        <!-- <label for="slide1" class="label">text slide 1</label>
-                        <label for="slide2" class="label">text slide 2</label>
-                        <label for="slide3" class="label">text slide 3</label> -->
-                      
-                        <div class="fake-radio" >
-                          <label for="slide1" class="radio-btn"></label>
-                          <label for="slide2" class="radio-btn"></label>
-                          <label for="slide3" class="radio-btn"></label>
-                        </div>
+                    
+                    <div class="mySlides fade">
+                      <img src="img/slider_02.jpg" style="width: 1142px;
+                      height: 470px;">
+                      <div class="text">Caption Two</div>
                     </div>
-                </div>
+                    
+                    <div class="mySlides fade">
+                      <img src="img/slider_01.jpg" style="width: 1142px;
+                      height: 470px;">
+                      <div class="text">Caption Three</div>
+                    </div>
+                    
+                    </div>
+                    <br>
+                    
+                    <div style="text-align:center">
+                      <span class="dot"></span> 
+                      <span class="dot"></span> 
+                      <span class="dot"></span> 
+                    </div>
                 <div>
                     <h3>CÔNG TY TNHH TM DV BAO BÌ GIẤY MINH THƯ</h3>
                     <p>NHÀ MÁY SẢN XUẤT VÀ KINH DOANH BAO BÌ CARTON</p>
                 </div>
-            </div>
+            </div> -->
             <!-- Giới thiệu -->
             <div id="bg_intro" onmouseenter="main()" onmouseleave="mouse_leave_intro()"  data-aos="fade-up">
                 <div id="intro" >
@@ -686,4 +669,23 @@
 </html>
 <script>
     AOS.init();
+    let slideIndex = 0;
+    showSlides();
+
+    function showSlides() {
+    let i;
+    let slides = document.getElementsByClassName("mySlides");
+    let dots = document.getElementsByClassName("dot");
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";  
+    }
+    slideIndex++;
+    if (slideIndex > slides.length) {slideIndex = 1}    
+    for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex-1].style.display = "block";  
+    dots[slideIndex-1].className += " active";
+    setTimeout(showSlides, 3500); // Change image every 2 seconds
+    }
 </script>
