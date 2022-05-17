@@ -1,67 +1,36 @@
-// main()
-// document.getElementById("box").addEventListener("click", main());
-// Hàm xử lý chính
-// function main(){
-//     Exp_of_y = 10
-//     Customer = 200
-//     Staff = 20
-//     Factory_acreage =3000
-//     const arr_Exp_of_y = set_delay(Exp_of_y)
-//     const arr_Customer = set_delay(Customer)
-//     const arr_Staff = set_delay(Staff)
-//     const arr_Factory_acreage = set_delay(Factory_acreage)
-//     animate_process(Staff,arr_Staff['plus'],arr_Staff['delay'],'Staff',' NHÂN SỰ')
-//     animate_process(Factory_acreage,arr_Factory_acreage['plus'],arr_Factory_acreage['delay'],'Factory_acreage',' m2')
-//     animate_process(Exp_of_y,arr_Exp_of_y['plus'],arr_Exp_of_y['delay'],'Exp_of_y',' NĂM')
-//     animate_process(Customer,arr_Customer['plus'],arr_Customer['delay'],'Customer','')
-// }
-// // hàm chạy hiệu ứng
-// function animate_process(finalNumber, plus, delay,id_tag,str_end){
-//     animateNumber(finalNumber,plus, delay,0, function (number) {
-//         const round_number = Math.round(number)
-//         const formattedNumber = '+'+round_number.toLocaleString()+str_end
-//         document.getElementById(id_tag).innerText = formattedNumber
-//     })
-// }
-// // Hàm xử lý delay để chạy số trong 2s
-// function set_delay (finalNumber){
-//     let delay = 2000 / finalNumber
-//     let plus = 1
-//     const arr = {'delay':'','plus':''}
-//     if(delay>=17){
-//         plus = 1
-//     }else{
-//         plus = Math.ceil(17/delay)
-//         delay = 17
-//     }
-//     arr['delay']=delay
-//     arr['plus']=plus
-//     return arr
-// }
-// // Hàm animate
-// function animateNumber(finalNumber, plus, delay, startNumber = 0, callback) {
-//     let crNo = startNumber
-//     const interval = window.setInterval(updateNumber, delay)
-//     function updateNumber() {
-//         if (crNo >= finalNumber) {
-//             crNo=finalNumber
-//         clearInterval(interval)
-//         } else {
-//         crNo+= plus
-//         }
-//         callback(crNo)
-//     }
-// // }
-
 var process_status = true;
-// Hàm nhận biết scroll đến phần intro thì chạy animation
-// function scroll_to_intro() {
-//     const element = document.getElementById("bg_intro");
-//     let y = element.scrollTop();
-//     if(y>=10){
-//         main()
-//     }
-//   }
+var myTimeout;
+let slideIndex = 1;
+function plusSlides(n) {
+    slideIndex--;
+    clearTimeout(myTimeout);
+    slideIndex += n;
+    showSlides();
+}
+
+// function currentSlide(n) {
+//     clearTimeout(myTimeout);
+//     slideIndex = n;
+//     showSlides();
+// }
+function showSlides() {
+    let i;
+    let slides = document.getElementsByClassName("mySlides");
+    let dots = document.getElementsByClassName("dot");
+    if (slideIndex > slides.length) {slideIndex = 1} 
+    if (slideIndex < 1){slideIndex = slides.length}
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";  
+    }   
+    // for (i = 0; i < dots.length; i++) {
+    //     dots[i].className = dots[i].className.replace(" active", "");
+    // }
+    slides[slideIndex-1].style.display = "block";  
+    // dots[slideIndex-1].className += " active";
+    myTimeout = setTimeout(showSlides, 2000); // Change image every 2 seconds
+    slideIndex++;
+    }
+// chạy số
 function mouse_leave_intro(){
     process_status==true
 }
@@ -172,25 +141,25 @@ function display_increase(number,id_tag,str_end){
 }
 
 // -----------------------------------------Xử lý scroll------------------------
-document.addEventListener("DOMContentLoaded",function() {
-    var menu = document.querySelectorAll('div.body');
-    var menu = menu[0];
-        //Truy xuất div menu
-        var trangthai="duoi300";
-    window.addEventListener("scroll",function(){
-        var x = pageYOffset;
-        if(x > 300){
-            if(trangthai == "duoi300")
-            {
-                trangthai="tren300";
-                menu.classList.add('menutora');
-            }
-        }
-        else{
-            if(trangthai=="tren300"){
-            menu.classList.remove('menutora');
-            trangthai="duoi300";}
-        }
+// document.addEventListener("DOMContentLoaded",function() {
+//     var menu = document.querySelectorAll('div.body');
+//     var menu = menu[0];
+//         //Truy xuất div menu
+//         var trangthai="duoi300";
+//     window.addEventListener("scroll",function(){
+//         var x = pageYOffset;
+//         if(x > 300){
+//             if(trangthai == "duoi300")
+//             {
+//                 trangthai="tren300";
+//                 menu.classList.add('menutora');
+//             }
+//         }
+//         else{
+//             if(trangthai=="tren300"){
+//             menu.classList.remove('menutora');
+//             trangthai="duoi300";}
+//         }
     
-    })
-})
+//     })
+// })

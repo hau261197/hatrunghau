@@ -72,29 +72,24 @@
                 <div class="slideshow-container">
 
                     <div class="mySlides fade">
-                      <img src="img/slider.png" style="height: 460px;
-                      width: 1142px;">
-                      <div class="text">Caption Text</div>
+                      <img src="img/slider.png" >
                     </div>
                     
                     <div class="mySlides fade">
-                      <img src="img/slider_02.jpg" style="height: 460px;
-                      width: 1142px;">
-                      <div class="text">Caption Two</div>
+                      <img src="img/slider_01.jpg">
                     </div>
                     
                     <div class="mySlides fade">
-                      <img src="img/slider_01.jpg" style="height: 460px;
-                      width: 1142px;">
-                      <div class="text">Caption Three</div>
+                      <img src="img/slider_02.jpg" >
                     </div>
-                    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-                    <a class="next" onclick="plusSlides(1)">&#10095;</a>
-                    <div style="text-align:center; margin-top: 10px;">
-                        <span class="dot" onclick="currentSlide(1)"></span>
-                        <span class="dot" onclick="currentSlide(2)"></span>
-                        <span class="dot" onclick="currentSlide(3)"></span>
-                      </div>
+                    <div style="text-align:center; display: none;">
+                        <span class="dot"></span> 
+                        <span class="dot"></span> 
+                        <span class="dot"></span> 
+                    </div>
+                    <a class="prev" onclick="plusSlides(-1)">❮</a>
+                    <a class="next" onclick="plusSlides(1)">❯</a>
+                </div>
                     <h3>
                         CÔNG TY TNHH SẢN XUẤT BAO BÌ GIẤY MINH THƯ
                     </h3>
@@ -403,61 +398,49 @@
                     <h2>DỊCH VỤ CỦA CHÚNG TÔI</h2>
                     <img src="img/white_box.png" alt="">
                     <div class="group_our_services">
-                        <div class="div_our_services" data-aos="fade-up" data-aos-duration="500">
-                            <div >
-                                <a href="" >
-                                    <div class="category_logo">
-                                        <img  src="img/categories.png" alt="category_logo">
-                                    </div>
-                                    <div class="category_name_background" >
-                                        <img src="img/bg_67_img_extra_bot.png" alt="bg_67_img_extra_bot">
-                                    </div>
-                                    <div class="category_name_txt">
-                                        BAO BÌ CARTON ABCD
-                                    </div>
-                                    <div class="category_intro">
-                                        Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci 
-                                    </div>
-                                </a>
+                    <div class="div_our_services" data-aos="fade-up" data-aos-duration="500">
+                        <a href="" >
+                            <div style="width:300px;height:300px">
+                                <img class="category_name_background" src="img/bg_67_img_extra_bot.png" alt="bg_67_img_extra_bot">
+                                <p class="category_name_txt">
+                                    BAO BÌ CARTON ABCD
+                                </p>
+                                <img class="category_logo" src="img/categories.png" alt="category_logo">
+                                <p class="category_intro">
+                                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci 
+                                </p>
                             </div>
-                        </div>
-                        <div class="div_our_services" data-aos="fade-up" data-aos-delay="300" data-aos-duration="500">
-                            <div>
-                                <a href="">
-                                    <div class="category_logo">
-                                        <img  src="img/categories_2.png" alt="category_logo">
-                                    </div>
-                                    <div class="category_name_background" >
-                                        <img src="img/bg_67_img_extra_bot.png" alt="bg_67_img_extra_bot">
-                                    </div>
-                                    <div class="category_name_txt">
-                                        CÔNG TY SẢN XUẤT BAO BÌ
-                                    </div>
-                                    <div class="category_intro">
-                                        Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci 
-                                    </div>
-                                </a>
-                            </div>
-                        </div>
-                        <div class="div_our_services" data-aos="fade-up" data-aos-delay="600" data-aos-duration="500">
-                            <div>
-                                <a href="">
-                                    <div class="category_logo">
-                                        <img  src="img/categories_3.png" alt="category_logo">
-                                    </div>
-                                    <div class="category_name_background" >
-                                        <img src="img/bg_67_img_extra_bot.png" alt="bg_67_img_extra_bot">
-                                    </div>
-                                    <div class="category_name_txt">
-                                        BAO BÌ CARTON EFGHIK 
-                                    </div>
-                                    <div class="category_intro">
-                                        Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci 
-                                    </div>
-                                </a>
-                            </div>
-                        </div>
+                        </a>
                     </div>
+                    <div class="div_our_services" data-aos="fade-up" data-aos-duration="500" data-aos-delay="300">
+                        <a href="" >
+                            <div style="width:300px;height:300px">
+                                <img class="category_name_background" src="img/bg_67_img_extra_bot.png" alt="bg_67_img_extra_bot">
+                                <p class="category_name_txt">
+                                    THÙNG CARTON IN ẤN
+                                </p>
+                                <img class="category_logo" src="img/categories_2.png" alt="category_logo">
+                                <p class="category_intro">
+                                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci 
+                                </p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="div_our_services" data-aos="fade-up" data-aos-duration="500" data-aos-delay="600">
+                        <a href="" >
+                            <div style="width:300px;height:300px">
+                                <img class="category_name_background" src="img/bg_67_img_extra_bot.png" alt="bg_67_img_extra_bot">
+                                <p class="category_name_txt">
+                                    BAO BÌ CHẤT LƯỢNG
+                                </p>
+                                <img class="category_logo" src="img/categories_3.png" alt="category_logo">
+                                <p class="category_intro">
+                                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci 
+                                </p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
                 </div>
             </div>
             <div class="clear"></div>
@@ -718,34 +701,30 @@
             </div>
             <div class="clear"></div>
         </div>
+        <!-- plugin fb zalo call -->
+        <!-- <div style="display:block;">
+            <div class="call-mobile2">
+                <a data-animate="fadeInDown" href="https://zalo.me/0903999690" target="_blank" class="button success1" style="border-radius:99px;" data-animated="true">
+                    <span><img src="img/icons8-zalo-60.png" alt=""></span>
+                </a>
+            </div>
+                
+            <div class="call-mobile1">
+                <a data-animate="fadeInDown" href="https://www.facebook.com/stanleydang88" target="_blank" class="button success2" style="border-radius:99px;" data-animated="true">
+                    <span><img src="img/icons8-facebook-messenger-60.png" alt=""></span>
+                </a>
+            </div>
+                
+            <div class="call-mobile">
+                <a id="callnowbutton" href="tel:0903999690">
+                    <img src="img/icons8-ringer-volume-60.png" alt="">
+                </a>
+            </div>
+        </div> -->
+        
     </body>
 </html>
 <script>
     AOS.init();
-    let slideIndex = 1;
-showSlides(slideIndex);
-
-function plusSlides(n) {
-  showSlides(slideIndex += n);
-}
-
-function currentSlide(n) {
-  showSlides(slideIndex = n);
-}
-
-function showSlides(n) {
-  let i;
-  let slides = document.getElementsByClassName("mySlides");
-  let dots = document.getElementsByClassName("dot");
-  if (n > slides.length) {slideIndex = 1}    
-  if (n < 1) {slideIndex = slides.length}
-  for (i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";  
-  }
-  for (i = 0; i < dots.length; i++) {
-    dots[i].className = dots[i].className.replace(" active", "");
-  }
-  slides[slideIndex-1].style.display = "block";  
-  dots[slideIndex-1].className += " active";
-}
+    showSlides(1);
 </script>

@@ -1,194 +1,177 @@
-<h1>Pure CSS slider</h1><pre>(with Autoplay at the beginning)</pre><br>
-<div id="homepage-slider" class="st-slider">
-
-    <input type="radio" class="cs_anchor radio" name="slider" id="slide1"/>
-    <input type="radio" class="cs_anchor radio" name="slider" id="slide2"/>
-    <input type="radio" class="cs_anchor radio" name="slider" id="slide3"/>
-    <input type="radio" class="cs_anchor radio" name="slider" id="play1" checked=""/>
-
-    <div class="images">
-       <div class="images-inner">
-        <div class="image-slide">
-          <div class="image bg-yellow" style="background-color:yellow;">
-          <img src="img/slider_01.jpg" alt="">
-          </div>
+ <!DOCTYPE html>
+<html>
+<head>
+<title>Page Title</title>
+</head>
+<body>
+    <div id="page">
+        <div class="our_services_margin">
+            <div id="our_services">
+                <h2>DỊCH VỤ CỦA CHÚNG TÔI</h2>
+                <img src="img/white_box.png" alt="">
+                <div class="group_our_services">
+                    <div class="div_our_services" data-aos="fade-up" data-aos-duration="500">
+                        <a href="" >
+                            <div style="width:300px;height:300px">
+                                <img class="category_name_background" src="img/bg_67_img_extra_bot.png" alt="bg_67_img_extra_bot">
+                                <p class="category_name_txt">
+                                    BAO BÌ CARTON ABCD
+                                </p>
+                                <img class="category_logo" src="img/categories.png" alt="category_logo">
+                                <p class="category_intro">
+                                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci 
+                                </p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="div_our_services" data-aos="fade-up" data-aos-duration="500">
+                        <a href="" >
+                            <div style="width:300px;height:300px">
+                                <img class="category_name_background" src="img/bg_67_img_extra_bot.png" alt="bg_67_img_extra_bot">
+                                <p class="category_name_txt">
+                                    BAO BÌ CARTON ABCD
+                                </p>
+                                <img class="category_logo" src="img/categories.png" alt="category_logo">
+                                <p class="category_intro">
+                                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci 
+                                </p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="div_our_services" data-aos="fade-up" data-aos-duration="500">
+                        <a href="" >
+                            <div style="width:300px;height:300px">
+                                <img class="category_name_background" src="img/bg_67_img_extra_bot.png" alt="bg_67_img_extra_bot">
+                                <p class="category_name_txt">
+                                    BAO BÌ CARTON ABCD
+                                </p>
+                                <img class="category_logo" src="img/categories.png" alt="category_logo">
+                                <p class="category_intro">
+                                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci 
+                                </p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="image-slide">
-          <div class="image bg-blue" style="background-color:pink;">
-            <img src="img/slider_02.jpg" alt=""></div>
-        </div>
-        <div class="image-slide">
-          <div class="image bg-red" style="background-color:orange;">
-            <img src="img/slider_03.jpg" alt=""></div>
-        </div>
-      </div>
     </div>
-  
-    <div class="labels">
-        <label for="slide1" class="label">text slide 1</label>
-        <label for="slide2" class="label">text slide 2</label>
-        <label for="slide3" class="label">text slide 3</label>
-      
-        <div class="fake-radio">
-          <label for="slide1" class="radio-btn"></label>
-          <label for="slide2" class="radio-btn"></label>
-          <label for="slide3" class="radio-btn"></label>
-        </div>
-    </div>
-</div>
+</body>
+</html> 
 <style>
-  .image {
-  width: 100%;
-  height: 200px;
-}
-.radio {
-  /*display: none;*/
-}
-.images {
-  overflow: hidden;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  width: 100%;
-}
-.images-inner {
-  width: 500%;
-  transition: all 800ms cubic-bezier(0.770, 0.000, 0.175, 1.000);
-  transition-timing-function: cubic-bezier(0.770, 0.000, 0.175, 1.000);
-}
-.image-slide {
-  width: 20%;
-  float: left;
-}
-.image-slide,
-.fake-radio,
-.radio-btn {
-  transition: all 0.5s ease-out;
-}
-.fake-radio {
-  float: right;
-}
 
-
-
-
-/* Move slides overflowed container */
-#slide1:checked ~ .images .images-inner {
-  margin-left: 0;
+.category_name_txt{ 
+    margin: 250px 0px 0px 70px;
+    z-index: 3;
+    position: absolute;
+    color: aliceblue;
+    width: 180px;
+    font: bold 20px arial;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
-#slide2:checked ~ .images .images-inner {
-  margin-left: -100%;
+.our_services_margin {
+    width: 1262px;
+    margin: 0px auto;
+    padding: 0px;
+    background: url('../img/bg_6.png') no-repeat;
+    height: 570px;
 }
-#slide3:checked ~ .images .images-inner {
-  margin-left: -200%;
+#our_services{
+    margin: 0px auto;
+    padding: 0px 60px 0px 60px;
+    width: 1142px;
+    text-align: center;
 }
-
-
-
-
-/* Color of bullets */
-#slide1:checked ~ div .fake-radio .radio-btn:nth-child(1),
-#slide2:checked ~ div .fake-radio .radio-btn:nth-child(2),
-#slide3:checked ~ div .fake-radio .radio-btn:nth-child(3) {
-  background: red;
+#our_services h2{
+    padding-top: 25px;
+    font:bold 25px arial;
+    color: whitesmoke;
 }
-.radio-btn {
-  width: 9px;
-  height: 9px;
-  border-radius: 5px;
-  background: gray;
-  display: inline-block !important;
-  margin: 0 1px;
-  cursor: pointer;
+.group_our_services{
+    margin: 20px 0px 0px 0px;
+    padding: 0px auto;
+    width: 1142px;
+    height: 450px;
 }
-/* Color of bullets - END */
-
-
-
-
-/* Text of slides */
-#slide1:checked ~ .labels .label:nth-child(1),
-#slide2:checked ~ .labels .label:nth-child(2),
-#slide3:checked ~ .labels .label:nth-child(3) {
-  opacity: 1;
+.div_our_services{
+    float: left;
+    margin: 0px;
+    text-align: center;
+    display: block;
+    padding-left: auto;
+    padding-right: auto;
+    width: 380px;
+}
+#our_services ul li{
+    float: left;
+    margin-right: -80px;
+}
+.category_logo{
+    border: 5px solid white;
+    border-radius: 50% ;
+    width: 300px;
+    height: 300px;
+    position: relative;
+    box-shadow: 0 0 10pt 0.5pt#5d5d5d;
+}
+.category_name_background{
+    margin: 216px 0px 0px 46px;
+    z-index: 3;
+    position: absolute;
+}
+.category_intro{
+    max-width: 380px;
+    text-align: center;
+    padding: 0px 20px 0px 30px;
+    margin-top: 15px;
+    color: #b2b2b2;
+    }
+.div_our_services a{
+    text-decoration: none;
 }
 
-.label {
-  opacity: 0;
-  position: absolute;
+.category_name_background:hover ~ .category_logo{
+    border: 5px solid #ffffff;
+    border-radius: 50% ;
+    width: 300px;
+    height: 300px;
+    position: relative;
+    box-shadow: 0 0 10pt 2pt#6babeb;
 }
-/* Text of slides - END */
-
-
-
-/* Calculate AUTOPLAY for BULLETS */
-@keyframes bullet {
-  0%, 33.32333333333334%	{
-    background: red;
-  }
-  33.333333333333336%, 100% {
-    background: gray;
-  }
+.category_name_txt:hover ~ .category_logo{
+    border: 5px solid #ffffff;
+    border-radius: 50% ;
+    width: 300px;
+    height: 300px;
+    position: relative;
+    box-shadow: 0 0 10pt 2pt#6babeb;
 }
-
-
-#play1:checked ~ div .fake-radio .radio-btn:nth-child(1) {
-  animation: bullet 12300ms infinite -1000ms;
+.category_logo:hover{
+    border: 5px solid #ffffff;
+    border-radius: 50% ;
+    width: 300px;
+    height: 300px;
+    position: relative;
+    box-shadow: 0 0 10pt 2pt#6babeb;
 }
-
-#play1:checked ~ div .fake-radio .radio-btn:nth-child(2) {
-  animation: bullet 12300ms infinite 3100ms;	
+body,html{
+    font-family: Tahoma;
+    font-size: 13px;
+    height: auto;
+    width: 1262px;
+    margin: 0px auto;
+    padding: 0px;
 }
-
-#play1:checked ~ div .fake-radio .radio-btn:nth-child(3) {
-  animation: bullet 12300ms infinite 7200ms;	
+.clear{
+    clear: both;
 }
-/* Calculate AUTOPLAY for BULLETS - END */
-
-
-
-
-/* Calculate AUTOPLAY for SLIDES */
-@keyframes slide {
-  0%, 25.203252032520325%	{ margin-left: 0; }
-  33.333333333333336%, 58.53658536585366%	{ margin-left: -100%; }
-  66.66666666666667%, 91.869918699187%	{ margin-left: -200%; }
+.page {
+ display: block;
 }
-
-
-.st-slider > #play1:checked ~ .images .images-inner {
-  animation: slide 12300ms infinite;	
+a{
+    cursor: pointer;
+    color: rgb(0, 0, 0);
 }
-/* Calculate AUTOPLAY for SLIDES - END */
-
-
-
-
-
-/* Calculate AUTOPLAY for CAPTION */
-@keyframes caption {
-  0%, 33.32333333333334%	{
-    opacity: 1;
-  }
-  33.333333333333336%, 100% {
-    opacity: 0;
-  }
-}
-
-
-#play1:checked ~ .labels .label:nth-child(1) {
-  animation: caption 12300ms infinite -1000ms;
-}
-
-#play1:checked ~ .labels .label:nth-child(2) {
-  animation: caption 12300ms infinite 3100ms;	
-}
-
-#play1:checked ~ .labels .label:nth-child(3) {
-  animation: caption 12300ms infinite 7200ms;	
-}
-/* Calculate AUTOPLAY for CAPTION - END */
-
-
 </style>
